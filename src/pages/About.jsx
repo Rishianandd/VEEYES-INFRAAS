@@ -239,8 +239,8 @@ export default function About({ onOpenQuote }) {
                   </p>
                 </div>
                 <div>
-                  <h4 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--primary-blue)' }}>V. Yoganand</h4>
-                  <div style={{ fontSize: '0.92rem', color: 'var(--charcoal-muted)', fontWeight: 600 }}>Founder & Managing Director, VEEYES INFRAAS</div>
+                  <h4 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--primary-blue)' }}>Sridhar K</h4>
+                  <div style={{ fontSize: '0.92rem', color: 'var(--charcoal-muted)', fontWeight: 600 }}>Founder & Chairman, VEEYES INFRAAS</div>
                 </div>
               </motion.div>
               <motion.div
