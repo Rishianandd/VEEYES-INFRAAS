@@ -1,0 +1,131 @@
+:root {
+  --bg: #ffffff;
+  --bg-soft: #091828;
+  --panel: rgba(10, 30, 58, 0.82);
+  --text: #333333;
+  --muted: #7fb8d8;
+  --accent: #63b95f;
+  --accent-2: #a7e08b;
+  --radius: 24px;
+  --nav-bg: #1a1a1a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Montenegrin Gothic One", serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(20px);
+  background-color: #014421 !important; /* Dark green navigation bar */
+  /* Dark navigation bar */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.07);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 5rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-mark {
+  width: 5rem;
+  height: auto;
+  display: block;
+}
+
+.brand-copy strong {
+  font-size: 1.35rem;
+}
+
+.brand-copy span {
+  font-size: 0.82rem;
+  color: #1562b3;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Navigation */
+.site-nav {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.site-nav a {
+  color: #028835;
+  text-decoration: none;
+  transition: color 0.16s;
+}
+
+.site-nav a:hover {
+  color: #1562b3;
+}
+
+/* Dark mode */
+.dark {
+  --bg: #0e1015;
+  --bg-soft: #14171c;
+  --panel: rgba(20, 20, 30, 0.9);
+  --text: #e0e0e0;
+  --muted: #a0c0e0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    background: var(--bg-soft);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+}
+
+/* Force dark navbar */
+header.site-header {
+  background: #1a1a1a !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.07) !important;
+}

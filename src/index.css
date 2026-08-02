@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Brand Colors from Official VEEYES INFRAAS Logo */
+  --primary-blue: #0B4F9C;
+  --secondary-blue: #1E63B7;
+  --primary-green: #62B348;
+  --light-green: #7AC943;
+  --white: #FFFFFF;
+  --light-gray: #F7F8FA;
+  --dark-charcoal: #1D232A;
+
+  /* Refined Luxury Color Tints & Muted Tones */
+  --blue-tint-light: #F0F5FC;
+  --blue-tint-medium: #E2ECF9;
+  --green-tint-light: #F1F9EF;
+  --green-tint-medium: #E2F3DD;
+  --charcoal-muted: #4A5568;
+  --border-light: rgba(11, 79, 156, 0.08);
+  --border-green: rgba(98, 179, 72, 0.22);
+  --border-glass: rgba(255, 255, 255, 0.25);
+
+  /* Typography */
+  --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Standardized Border Radius (18-20px) */
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  /* Luxury Soft Shadows & Glass Glows */
+  --shadow-subtle: 0 4px 24px rgba(11, 79, 156, 0.04);
+  --shadow-card: 0 12px 36px -6px rgba(11, 79, 156, 0.06), 0 4px 16px rgba(0, 0, 0, 0.02);
+  --shadow-hover: 0 24px 48px -12px rgba(11, 79, 156, 0.14), 0 8px 24px rgba(98, 179, 72, 0.12);
+  --shadow-glass: 0 16px 40px 0 rgba(11, 79, 156, 0.07);
+  --glow-blue: 0 0 25px rgba(11, 79, 156, 0.35);
+  --glow-green: 0 0 25px rgba(98, 179, 72, 0.4);
+
+  /* Smooth Easing Transitions */
+  --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--white);
+  color: var(--dark-charcoal);
+  line-height: 1.75;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--dark-charcoal);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  font-size: clamp(2rem, 3.5vw, 2.85rem);
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--charcoal-muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Elegant Blueprint Background Overlay (3-5% Opacity) */
+.blueprint-overlay {
+  position: relative;
+}
+
+.blueprint-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(rgba(11, 79, 156, 0.04) 1.5px, transparent 1.5px),
+    linear-gradient(to right, rgba(11, 79, 156, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 79, 156, 0.025) 1px, transparent 1px);
+  background-size: 40px 40px, 80px 80px, 80px 80px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.85;
+}
+
+/* Elegant Section Dividers */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(11, 79, 156, 0.12) 30%, rgba(98, 179, 72, 0.18) 70%, transparent 100%);
+  margin: 0 auto;
+}
+
+/* Refined Subtle Glassmorphism Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-glass);
+}
+
+.glass-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(98, 179, 72, 0.35);
+}
+
+/* Consistent Luxury Section Spacing (120px Desktop, 80px Mobile) */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.section-padding {
+  padding: 120px 0;
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 20px;
+  }
+  .section-padding {
+    padding: 80px 0;
+  }
+}
+
+/* Section Header Standardization */
+.section-title {
+  font-size: clamp(2.1rem, 3.5vw, 2.85rem);
+  font-weight: 800;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  color: var(--dark-charcoal);
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-size: 1.15rem;
+  color: var(--charcoal-muted);
+  max-width: 720px;
+  line-height: 1.75;
+  margin-bottom: 50px;
+}
+
+/* Premium Pill Badges */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.badge-blue {
+  background-color: var(--blue-tint-light);
+  color: var(--primary-blue);
+  border: 1px solid rgba(11, 79, 156, 0.15);
+}
+
+.badge-green {
+  background-color: var(--green-tint-light);
+  color: var(--primary-green);
+  border: 1px solid var(--border-green);
+}
+
+/* Improved Luxury Buttons with Smooth Hover Animations */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.02rem;
+  padding: 16px 32px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 6px 20px rgba(11, 79, 156, 0.22);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(11, 79, 156, 0.38), var(--glow-blue);
+  background: linear-gradient(135deg, #094285 0%, #16539D 100%);
+}
+
+.btn-green {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.02rem;
+  padding: 16px 32px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 6px 20px rgba(98, 179, 72, 0.28);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-green:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(98, 179, 72, 0.45), var(--glow-green);
+  background: linear-gradient(135deg, #539E3B 0%, #68B434 100%);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: var(--white);
+  color: var(--primary-blue);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.02rem;
+  padding: 16px 32px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--primary-blue);
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-subtle);
+}
+
+.btn-secondary:hover {
+  background: var(--blue-tint-light);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(11, 79, 156, 0.15);
+}
+
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.02rem;
+  padding: 16px 32px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  transition: var(--transition-smooth);
+}
+
+.btn-outline-white:hover {
+  background: var(--white);
+  color: var(--dark-charcoal);
+  border-color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(255, 255, 255, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--light-gray);
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-blue);
+}
