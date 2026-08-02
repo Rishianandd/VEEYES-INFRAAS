@@ -74,7 +74,7 @@ export default function Navbar({ activePage, setActivePage, onOpenQuote, onNavig
           }}
         >
           <img
-            src="img/veyes-logo.png"
+            src="/img/veyes-logo.png"
             alt="VEEYES INFRAAS"
             style={{
               height: scrolled ? '44px' : '50px',

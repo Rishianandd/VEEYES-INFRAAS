@@ -51,7 +51,7 @@ export default function Projects({ onOpenProject, onOpenQuote }) {
           style={{
             position: 'absolute',
             inset: 0,
-            backgroundImage: 'url("img/hero_background.png")',
+            backgroundImage: 'url("/img/hero_background.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             opacity: 0.25,

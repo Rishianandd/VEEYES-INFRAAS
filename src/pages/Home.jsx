@@ -25,7 +25,7 @@ export default function Home({ onOpenProject, onOpenQuote, onNavigateSection }) 
       id: 'veyes-villa-project',
       title: 'Premium Villa Development',
       location: 'Mudichur Road, Chennai',
-      image: 'img/hero_background.png',
+      image: '/img/hero_background.png',
       category: 'Residential',
       status: 'Completed',
       description: 'A thoughtfully designed gated villa community combining modern architecture with functional layouts and premium finishes.'
@@ -34,7 +34,7 @@ export default function Home({ onOpenProject, onOpenQuote, onNavigateSection }) 
       id: 'veyes-commercial-complex',
       title: 'Commercial Office Complex',
       location: 'GST Road, Chennai',
-      image: 'img/cf661530a209fec.jpg',
+      image: '/img/cf661530a209fec.jpg',
       category: 'Commercial',
       status: 'Completed',
       description: 'A modern commercial building delivering efficient office spaces, durable construction, and premium corporate aesthetics.'
@@ -43,7 +43,7 @@ export default function Home({ onOpenProject, onOpenQuote, onNavigateSection }) 
       id: 'veyes-turnkey-project',
       title: 'Turnkey Industrial Build',
       location: 'Sriperumbudur, Chennai',
-      image: 'img/WhatsApp Image 2026-08-02 at 9.40.36 PM.jpeg',
+      image: '/img/WhatsApp Image 2026-08-02 at 9.40.36 PM.jpeg',
       category: 'Turnkey',
       status: 'Completed',
       description: 'End-to-end turnkey execution from design to final handover, delivered on schedule with zero cost overruns.'
@@ -104,7 +104,7 @@ export default function Home({ onOpenProject, onOpenQuote, onNavigateSection }) 
           style={{
             position: 'absolute',
             inset: 0,
-            backgroundImage: 'url("img/hero_background.png")',
+            backgroundImage: 'url("/img/hero_background.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             filter: 'brightness(0.65) contrast(1.1)',
@@ -210,7 +210,7 @@ export default function Home({ onOpenProject, onOpenQuote, onNavigateSection }) 
               }}
             >
               <img
-                src="img/hero_construction_bg.png"
+                src="/img/hero_construction_bg.png"
                 alt="VEEYES INFRAAS Construction Project"
                 loading="lazy"
                 style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -442,9 +442,9 @@ export default function Home({ onOpenProject, onOpenQuote, onNavigateSection }) 
           </div>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '60px', flexWrap: 'wrap' }}>
             {[
-              { src: 'img/bai.png', alt: 'Builders Association of India (BAI)' },
-              { src: 'img/cni.png', alt: 'Construction Network of India (CNI)' },
-              { src: 'img/rmb.png', alt: 'Rotary Means Business (RMB)' }
+              { src: '/img/bai.png', alt: 'Builders Association of India (BAI)' },
+              { src: '/img/cni.png', alt: 'Construction Network of India (CNI)' },
+              { src: '/img/rmb.png', alt: 'Rotary Means Business (RMB)' }
             ].map((logo, i) => (
               <motion.div
                 key={i}

@@ -78,7 +78,7 @@ export default function About({ onOpenQuote }) {
           backgroundColor: 'var(--dark-charcoal)', color: 'var(--white)', overflow: 'hidden'
         }}
       >
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url("img/hero_background.png")', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.25, filter: 'brightness(0.7)' }} />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url("/img/hero_background.png")', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.25, filter: 'brightness(0.7)' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(11, 79, 156, 0.88) 0%, rgba(29, 35, 42, 0.95) 100%)' }} />
         <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center', maxWidth: '850px' }}>
           <motion.div initial="hidden" animate="visible" custom={0} variants={fadeUp} className="badge-pill badge-green" style={{ marginBottom: '22px' }}>
@@ -127,7 +127,7 @@ export default function About({ onOpenQuote }) {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={slideRight}
               style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-hover)', border: '1px solid var(--border-light)' }}
             >
-              <img src="img/hero_construction_bg.png" alt="VEEYES INFRAAS Construction" loading="lazy" style={{ width: '100%', height: 'auto', display: 'block' }} />
+              <img src="/img/hero_construction_bg.png" alt="VEEYES INFRAAS Construction" loading="lazy" style={{ width: '100%', height: 'auto', display: 'block' }} />
             </motion.div>
           </div>
         </div>
@@ -143,7 +143,7 @@ export default function About({ onOpenQuote }) {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={slideLeft}
               style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-hover)', border: '1px solid var(--border-light)' }}
             >
-              <img src="img/cf661530a209fec.jpg" alt="VEEYES INFRAAS Vision and Mission" loading="lazy" style={{ width: '100%', height: 'auto', display: 'block' }} />
+              <img src="/img/cf661530a209fec.jpg" alt="VEEYES INFRAAS Vision and Mission" loading="lazy" style={{ width: '100%', height: 'auto', display: 'block' }} />
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={slideRight} style={{ display: 'flex', flexDirection: 'column', gap: '36px' }}>
               {/* Vision */}

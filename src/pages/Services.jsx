@@ -17,7 +17,7 @@ export default function Services({ onOpenQuote }) {
       id: 'residential-construction',
       title: 'Residential Construction',
       icon: HomeIcon,
-      image: 'img/hero_background.png',
+      image: '/img/hero_background.png',
       description: 'We specialize in constructing premium villas, apartments, independent houses, and residential developments that combine functionality with aesthetic excellence. Every project is carefully planned from foundation to completion using durable materials, modern construction techniques, and efficient project management to deliver homes that stand the test of time.',
       benefits: [
         'Custom architectural planning & design',
@@ -31,7 +31,7 @@ export default function Services({ onOpenQuote }) {
       id: 'commercial-construction',
       title: 'Commercial Construction',
       icon: Building2,
-      image: 'img/cf661530a209fec.jpg',
+      image: '/img/cf661530a209fec.jpg',
       description: 'We design and construct office buildings, commercial complexes, retail spaces, and business infrastructure that meet modern industry standards. Our experienced engineers ensure every commercial project is executed with quality, safety, durability, and operational efficiency to serve your business for decades.',
       benefits: [
         'Modern office buildings & corporate complexes',
@@ -45,7 +45,7 @@ export default function Services({ onOpenQuote }) {
       id: 'turnkey-construction',
       title: 'Turnkey Construction',
       icon: Layers,
-      image: 'img/hero_construction_bg.png',
+      image: '/img/hero_construction_bg.png',
       description: 'Our turnkey construction services provide complete end-to-end project execution — from architectural planning and design to structural construction, finishing, and final handover. We manage every phase of the project, ensuring timely delivery, cost efficiency, and uncompromised quality throughout.',
       benefits: [
         'Single point of accountability from start to finish',
@@ -59,7 +59,7 @@ export default function Services({ onOpenQuote }) {
       id: 'renovation-remodeling',
       title: 'Renovation & Remodeling',
       icon: HardHat,
-      image: 'img/WhatsApp Image 2026-08-02 at 9.40.36 PM.jpeg',
+      image: '/img/WhatsApp Image 2026-08-02 at 9.40.36 PM.jpeg',
       description: 'We transform existing residential, commercial, and industrial properties through professional renovation and remodeling solutions. Whether it is structural upgrades, interior modernization, or complete property makeovers, we create functional and visually appealing spaces while staying within budget and project timelines.',
       benefits: [
         'Residential & commercial renovation',
@@ -73,7 +73,7 @@ export default function Services({ onOpenQuote }) {
       id: 'interior-solutions',
       title: 'Interior Solutions',
       icon: Paintbrush,
-      image: 'img/hero_background.png',
+      image: '/img/hero_background.png',
       description: 'Our interior design and execution services create elegant, practical, and modern spaces that reflect our clients\' lifestyle and business requirements. We deliver customized interior solutions with attention to detail, premium finishes, and superior craftsmanship for both homes and commercial properties.',
       benefits: [
         'Customized interior design & planning',
@@ -91,7 +91,7 @@ export default function Services({ onOpenQuote }) {
       <section
         style={{ position: 'relative', padding: '110px 0 90px', backgroundColor: 'var(--dark-charcoal)', color: 'var(--white)', overflow: 'hidden' }}
       >
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url("img/hero_background.png")', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.25, filter: 'brightness(0.7)' }} />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url("/img/hero_background.png")', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.25, filter: 'brightness(0.7)' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(11, 79, 156, 0.88) 0%, rgba(29, 35, 42, 0.95) 100%)' }} />
         <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center', maxWidth: '850px' }}>
           <motion.div initial="hidden" animate="visible" custom={0} variants={fadeUp} className="badge-pill badge-green" style={{ marginBottom: '22px' }}>

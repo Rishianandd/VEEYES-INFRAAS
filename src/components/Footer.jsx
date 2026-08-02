@@ -26,7 +26,7 @@ export default function Footer({ onNavigateSection, onOpenQuote }) {
           {/* Brand Info */}
           <div style={{ maxWidth: '380px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px' }}>
-              <img src="img/veyes-logo.png" alt="VEEYES INFRAAS" style={{ height: '44px', width: 'auto' }} />
+              <img src="/img/veyes-logo.png" alt="VEEYES INFRAAS" style={{ height: '44px', width: 'auto' }} />
               <div>
                 <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.3rem', fontWeight: 800, color: 'var(--white)' }}>
                   VEEYES <span style={{ color: 'var(--light-green)' }}>INFRAAS</span>
