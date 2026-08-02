@@ -59,7 +59,7 @@ export default function Services({ onOpenQuote }) {
       id: 'renovation-remodeling',
       title: 'Renovation & Remodeling',
       icon: HardHat,
-      image: '/img/WhatsApp Image 2026-08-02 at 9.40.36 PM.jpeg',
+      image: 'img/792026816M-1783684335856.webp',
       description: 'We transform existing residential, commercial, and industrial properties through professional renovation and remodeling solutions. Whether it is structural upgrades, interior modernization, or complete property makeovers, we create functional and visually appealing spaces while staying within budget and project timelines.',
       benefits: [
         'Residential & commercial renovation',

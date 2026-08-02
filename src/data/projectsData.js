@@ -57,7 +57,7 @@ export const projectsData = [
     completionYear: '2024',
     status: 'Completed',
     client: 'State Highway Infrastructure Authority',
-    image: '/img/WhatsApp Image 2026-08-02 at 9.40.36 PM.jpeg',
+    image: 'img/images.jpg',
     description: 'Turnkey EPC execution of a 4-lane elevated highway flyover featuring pre-stressed concrete girders, noise barriers, LED smart street lighting, and automated toll integration.',
     highlights: [
       'Pre-stressed Concrete Viaduct Girders',
@@ -127,7 +127,7 @@ export const projectsData = [
     completionYear: '2026',
     status: 'Ongoing',
     client: 'Urban Transport Development Corp',
-    image: '/img/hero_construction_bg.png',
+    image: 'img/chennai-vertical-growth-master-plan-metro-corridor.jpg',
     description: 'Heavy civil infrastructure contract for pre-cast segment elevation, storm utility corridors, and heavy segmental pier installation with zero traffic congestion routing.',
     highlights: [
       'Pre-cast Segmental Gantry Installation',

@@ -26,7 +26,7 @@ export default function About({ onOpenQuote }) {
     {
       year: '2001',
       title: 'Foundation of VEEYES INFRAAS',
-      desc: 'V. Yoganand established VEEYES INFRAAS in Chennai with a clear mission: to deliver reliable, high-quality construction with complete transparency and client trust.'
+      desc: 'Sridhar K established VEEYES INFRAAS in Chennai with a clear mission: to deliver reliable, high-quality construction with complete transparency and client trust.'
     },
     {
       year: '2005',
@@ -127,7 +127,7 @@ export default function About({ onOpenQuote }) {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={slideRight}
               style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-hover)', border: '1px solid var(--border-light)' }}
             >
-              <img src="/img/hero_construction_bg.png" alt="VEEYES INFRAAS Construction" loading="lazy" style={{ width: '100%', height: 'auto', display: 'block' }} />
+              <img src="/img/chennai-vertical-growth-master-plan-metro-corridor.jpg" alt="VEEYES INFRAAS Construction" loading="lazy" style={{ width: '100%', height: 'auto', display: 'block' }} />
             </motion.div>
           </div>
         </div>
@@ -251,7 +251,7 @@ export default function About({ onOpenQuote }) {
                   25+ Years of Construction Leadership
                 </h4>
                 <p style={{ fontSize: '0.98rem', color: 'var(--charcoal-muted)', lineHeight: 1.7, marginBottom: '24px' }}>
-                  Since founding VEEYES INFRAAS in 2001, V. Yoganand has led the company to become a trusted construction name across Chennai, maintaining a perfect record of client satisfaction across all project categories.
+                  Since founding VEEYES INFRAAS in 2001, Sridhar K has led the company to become a trusted construction name across Chennai, maintaining a perfect record of client satisfaction across all project categories.
                 </p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'var(--primary-green)', fontWeight: 700, fontSize: '0.95rem' }}>
                   <CheckCircle2 size={20} />

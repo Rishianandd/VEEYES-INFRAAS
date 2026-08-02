@@ -25,7 +25,7 @@ export default function Home({ onOpenProject, onOpenQuote, onNavigateSection }) 
       id: 'veyes-villa-project',
       title: 'Premium Villa Development',
       location: 'Mudichur Road, Chennai',
-      image: '/img/hero_background.png',
+      image: '/img/images.jpg',
       category: 'Residential',
       status: 'Completed',
       description: 'A thoughtfully designed gated villa community combining modern architecture with functional layouts and premium finishes.'
@@ -43,7 +43,7 @@ export default function Home({ onOpenProject, onOpenQuote, onNavigateSection }) 
       id: 'veyes-turnkey-project',
       title: 'Turnkey Industrial Build',
       location: 'Sriperumbudur, Chennai',
-      image: '/img/WhatsApp Image 2026-08-02 at 9.40.36 PM.jpeg',
+      image: '/img/o.jpeg',
       category: 'Turnkey',
       status: 'Completed',
       description: 'End-to-end turnkey execution from design to final handover, delivered on schedule with zero cost overruns.'
@@ -210,7 +210,7 @@ export default function Home({ onOpenProject, onOpenQuote, onNavigateSection }) 
               }}
             >
               <img
-                src="/img/hero_construction_bg.png"
+                src="/img/1.webp"
                 alt="VEEYES INFRAAS Construction Project"
                 loading="lazy"
                 style={{ width: '100%', height: 'auto', display: 'block' }}

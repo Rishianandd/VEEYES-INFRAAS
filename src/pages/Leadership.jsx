@@ -16,7 +16,7 @@ export default function Leadership({ onOpenQuote }) {
     {
       year: '2001',
       title: 'Founded VEEYES INFRAAS',
-      desc: 'V. Yoganand established VEEYES INFRAAS in Chennai with a vision to deliver reliable, high-quality construction built on integrity, transparency, and engineering excellence.'
+      desc: 'Sridhar K established VEEYES INFRAAS in Chennai with a vision to deliver reliable, high-quality construction built on integrity, transparency, and engineering excellence.'
     },
     {
       year: '2005',
@@ -96,7 +96,7 @@ export default function Leadership({ onOpenQuote }) {
                 <div style={{ width: '140px', height: '140px', borderRadius: '50%', background: 'linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%)', color: 'var(--white)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-heading)', fontSize: '3.2rem', fontWeight: 800, margin: '0 auto 28px', boxShadow: '0 12px 30px rgba(0,0,0,0.35)', border: '4px solid rgba(255,255,255,0.25)' }}>
                   VY
                 </div>
-                <h3 style={{ fontSize: '2.1rem', fontWeight: 800, color: 'var(--white)', marginBottom: '8px' }}>V. Yoganand</h3>
+                <h3 style={{ fontSize: '2.1rem', fontWeight: 800, color: 'var(--white)', marginBottom: '8px' }}>Sridhar K</h3>
                 <div style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--light-green)', marginBottom: '20px' }}>Founder & Managing Director</div>
                 <div className="badge-pill" style={{ backgroundColor: 'rgba(255,255,255,0.12)', color: 'var(--white)', border: '1px solid rgba(255,255,255,0.35)', fontSize: '0.9rem', padding: '8px 20px' }}>
                   25+ Years Construction Experience
