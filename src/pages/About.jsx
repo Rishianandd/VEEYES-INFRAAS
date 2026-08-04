@@ -143,7 +143,7 @@ export default function About({ onOpenQuote }) {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={slideLeft}
               style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-hover)', border: '1px solid var(--border-light)' }}
             >
-              <img src="/img/cf661530a209fec.jpg" alt="VEEYES INFRAAS Vision and Mission" loading="lazy" style={{ width: '100%', height: 'auto', display: 'block' }} />
+              <img src="/img/o.jpeg" alt="VEEYES INFRAAS Vision and Mission" loading="lazy" style={{ width: '100%', height: 'auto', display: 'block' }} />
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={slideRight} style={{ display: 'flex', flexDirection: 'column', gap: '36px' }}>
               {/* Vision */}

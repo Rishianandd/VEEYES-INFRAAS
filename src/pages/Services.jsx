@@ -45,7 +45,7 @@ export default function Services({ onOpenQuote }) {
       id: 'turnkey-construction',
       title: 'Turnkey Construction',
       icon: Layers,
-      image: '/img/hero_construction_bg.png',
+      image: '/img/o.jpeg',
       description: 'Our turnkey construction services provide complete end-to-end project execution — from architectural planning and design to structural construction, finishing, and final handover. We manage every phase of the project, ensuring timely delivery, cost efficiency, and uncompromised quality throughout.',
       benefits: [
         'Single point of accountability from start to finish',
