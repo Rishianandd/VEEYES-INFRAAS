@@ -106,13 +106,13 @@ export default function QuoteModal({ isOpen, onClose }) {
           >
             <div>
               <div className="badge-pill badge-green" style={{ marginBottom: '8px', color: 'var(--white)', backgroundColor: 'rgba(98, 179, 72, 0.3)', border: '1px solid rgba(255,255,255,0.3)' }}>
-                Commercial Inquiry
+                Direct Consultation
               </div>
               <h3 style={{ fontSize: '1.6rem', color: 'var(--white)', fontWeight: 800 }}>
-                Request Project Quote & Consultation
+                Contact & Project Consultation
               </h3>
-              <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.85)', marginTop: '4px' }}>
-                Connect directly with VEEYES INFRAAS Senior Engineering Team
+              <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.9)', marginTop: '4px' }}>
+                Email us directly at <a href="mailto:vebuild98@gmail.com" style={{ color: 'var(--light-green)', fontWeight: 700, textDecoration: 'underline' }}>vebuild98@gmail.com</a>
               </p>
             </div>
             <button
@@ -161,7 +161,7 @@ export default function QuoteModal({ isOpen, onClose }) {
                   Inquiry Received!
                 </h3>
                 <p style={{ color: 'var(--charcoal-muted)', fontSize: '1rem', maxWidth: '480px', margin: '0 auto 20px' }}>
-                  Thank you, <strong>{formData.name}</strong>. Your project quote request has been dispatched to our Chief Operations Directorate.
+                  Thank you, <strong>{formData.name}</strong>. Your project inquiry has been received and forwarded to <strong style={{ color: 'var(--primary-blue)' }}>vebuild98@gmail.com</strong>.
                 </p>
 
                 <div
@@ -302,12 +302,11 @@ export default function QuoteModal({ isOpen, onClose }) {
                         fontSize: '0.95rem'
                       }}
                     >
-                      <option>Commercial IT Park / Corporate Tower</option>
-                      <option>Luxury Residential High-Rise / Villas</option>
-                      <option>Industrial Logistics & Warehouse Park</option>
-                      <option>Civil Infrastructure & Highways</option>
-                      <option>Turnkey EPC Contract</option>
-                      <option>Corporate Interior Fit-Out & Renovation</option>
+                      <option>Residential Construction (Villas, Houses, Apartments)</option>
+                      <option>Commercial Office & Business Facilities</option>
+                      <option>Turnkey EPC Construction</option>
+                      <option>Renovation & Remodeling</option>
+                      <option>Interior Design & Execution</option>
                     </select>
                   </div>
 
@@ -328,10 +327,10 @@ export default function QuoteModal({ isOpen, onClose }) {
                         fontSize: '0.95rem'
                       }}
                     >
-                      <option>Below ₹5 Crore</option>
-                      <option>₹5 Cr - ₹25 Crore</option>
-                      <option>₹25 Cr - ₹100 Crore</option>
-                      <option>Above ₹100 Crore</option>
+                      <option>Below ₹50 Lakhs</option>
+                      <option>₹50 Lakhs - ₹2 Crore</option>
+                      <option>₹2 Crore - ₹10 Crore</option>
+                      <option>Above ₹10 Crore</option>
                     </select>
                   </div>
                 </div>

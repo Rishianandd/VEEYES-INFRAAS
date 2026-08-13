@@ -93,8 +93,12 @@ export default function Leadership({ onOpenQuote }) {
                   padding: '48px 36px', color: 'var(--white)', textAlign: 'center', boxShadow: 'var(--shadow-hover)'
                 }}
               >
-                <div style={{ width: '140px', height: '140px', borderRadius: '50%', background: 'linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%)', color: 'var(--white)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-heading)', fontSize: '3.2rem', fontWeight: 800, margin: '0 auto 28px', boxShadow: '0 12px 30px rgba(0,0,0,0.35)', border: '4px solid rgba(255,255,255,0.25)' }}>
-                  VY
+                <div style={{ width: '160px', height: '160px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 28px', boxShadow: '0 12px 30px rgba(0,0,0,0.35)', border: '4px solid rgba(255,255,255,0.3)' }}>
+                  <img
+                    src="/img/owner.jpeg"
+                    alt="Sridhar K - Founder & Managing Director"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }}
+                  />
                 </div>
                 <h3 style={{ fontSize: '2.1rem', fontWeight: 800, color: 'var(--white)', marginBottom: '8px' }}>Sridhar K</h3>
                 <div style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--light-green)', marginBottom: '20px' }}>Founder & Managing Director</div>

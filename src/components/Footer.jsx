@@ -89,7 +89,9 @@ export default function Footer({ onNavigateSection, onOpenQuote }) {
             </div>
             <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
               <Mail size={16} style={{ color: 'var(--secondary-blue)', flexShrink: 0 }} />
-              <span>admin@veyesinfraas.co</span>
+              <a href="mailto:vebuild98@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>
+                vebuild98@gmail.com
+              </a>
             </div>
             <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
               <MapPin size={16} style={{ color: 'var(--primary-green)', flexShrink: 0, marginTop: '2px' }} />

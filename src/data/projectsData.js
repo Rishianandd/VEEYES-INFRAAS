@@ -1,143 +1,157 @@
 export const projectsData = [
   {
-    id: 'veyes-tech-park',
-    title: 'VEEYES Tech Park',
-    category: 'Commercial',
-    categoryLabel: 'Commercial IT Park',
-    location: 'OMR Tech Corridor, Chennai',
-    area: '850,000 Sq. Ft.',
-    completionYear: '2024',
-    status: 'Completed',
-    client: 'Apex Global Tech Solutions',
-    image: '/img/cf661530a209fec.jpg',
-    description: 'A grade-A LEED Gold certified IT park featuring double-glazed glass curtain facades, integrated smart energy management, multi-level basements, and ultra-modern corporate amenities.',
-    highlights: [
-      'LEED Gold Sustainable Certification',
-      'High-speed Smart Elevators & HVAC System',
-      'Multi-tier Security & Fire Suppression',
-      '1,200+ Covered Vehicle Parking Spaces'
-    ],
-    gallery: [
-      '/img/cf661530a209fec.jpg',
-      '/img/hero_background.png',
-      '/img/hero_construction_bg.png'
-    ]
-  },
-  {
-    id: 'veyes-horizon-towers',
-    title: 'VEEYES Horizon Towers',
+    id: 'res-perungalathur-neukundram',
+    title: 'Residential Property',
     category: 'Residential',
-    categoryLabel: 'Luxury Residential',
-    location: 'ECR Seafront Corridor, Chennai',
-    area: '1,200,000 Sq. Ft.',
-    completionYear: '2025',
+    categoryLabel: 'Residential Development',
+    location: 'Perungalathur – Neukundram Road',
+    area: 'Residential Build',
+    completionYear: 'Handed Over',
     status: 'Completed',
-    client: 'VEEYES Housing Pvt. Ltd.',
-    image: '/img/hero_background.png',
-    description: 'Twin 28-storey luxury residential towers overlooking the Bay of Bengal. Features infinity rooftop pools, private clubhouse, structural earthquake resilience (Zone III compliant), and high-end fitments.',
+    client: 'Private Client',
+    image: '/img/Perungalthur -  Neukundram Road.jpeg',
+    description: 'Residential property development located along Perungalathur – Neukundram Road, delivered with a focus on quality construction and modern residential requirements.',
     highlights: [
-      'Panoramic Oceanfront Balconies',
-      'Seismic Zone III Engineered Structure',
-      'Smart Home Automation Integration',
-      'State-of-the-Art Clubhouse & Sports Arena'
+      'Quality Reinforced Concrete Structure',
+      'Modern Residential Layout & Elevation',
+      'Durable Exterior & Interior Finishing',
+      'Turnkey Construction Delivery'
     ],
     gallery: [
-      '/img/hero_background.png',
-      '/img/cf661530a209fec.jpg',
-      '/img/hero_construction_bg.png'
+      '/img/Perungalthur -  Neukundram Road.jpeg'
     ]
   },
   {
-    id: 'veyes-expressway-corridor',
-    title: 'Grand Southern Expressway',
-    category: 'Infrastructure',
-    categoryLabel: 'Civil Infrastructure',
-    location: 'GST Road Corridor, Tamil Nadu',
-    area: '14.5 Km Corridor',
-    completionYear: '2024',
-    status: 'Completed',
-    client: 'State Highway Infrastructure Authority',
-    image: '/img/images.jpg',
-    description: 'Turnkey EPC execution of a 4-lane elevated highway flyover featuring pre-stressed concrete girders, noise barriers, LED smart street lighting, and automated toll integration.',
-    highlights: [
-      'Pre-stressed Concrete Viaduct Girders',
-      'Zero Incident Safety Record During Build',
-      'Advanced Structural Health Monitoring Sensors',
-      'Noise-reducing Asphalt Wearing Surface'
-    ],
-    gallery: [
-      '/img/WhatsApp Image 2026-08-02 at 9.40.36 PM.jpeg',
-      '/img/hero_construction_bg.png',
-      '/img/cf661530a209fec.jpg'
-    ]
-  },
-  {
-    id: 'veyes-apex-corporate-tower',
-    title: 'VEEYES Apex Corporate Center',
-    category: 'Commercial',
-    categoryLabel: 'Corporate Headquarters',
-    location: 'Guindy Commercial Hub, Chennai',
-    area: '620,000 Sq. Ft.',
-    completionYear: '2025',
-    status: 'Completed',
-    client: 'Multinational Banking Corp',
-    image: '/img/cf661530a209fec.jpg',
-    description: 'State-of-the-art corporate office complex with luxury atrium, sky bridges, acoustic insulation, and central solar farm power integration.',
-    highlights: [
-      'Sky Bridge Connecting Twin Towers',
-      'Solar Energy Offsetting 35% Grid Load',
-      'IGBC Platinum Rated Energy Standards',
-      'Executive Helipad & Sky Lounge'
-    ],
-    gallery: [
-      '/img/cf661530a209fec.jpg',
-      '/img/hero_background.png'
-    ]
-  },
-  {
-    id: 'veyes-sanctuary-enclave',
-    title: 'VEEYES Sanctuary Enclave',
+    id: 'res-tirupur-palladam-1',
+    title: 'Residential Property',
     category: 'Residential',
-    categoryLabel: 'Gated Luxury Villas',
-    location: 'Coimbatore Foothills',
-    area: '450,000 Sq. Ft.',
-    completionYear: '2026',
-    status: 'Ongoing',
-    client: 'Private High Net-Worth Investors',
-    image: '/img/hero_background.png',
-    description: 'An exclusive collection of 48 eco-luxury private villas designed with sustainable timber, solar microgrids, private plunge pools, and zero-waste water recycling.',
+    categoryLabel: 'Residential Development',
+    location: 'Tirupur – Palladam Road',
+    area: 'Residential Build',
+    completionYear: 'Handed Over',
+    status: 'Completed',
+    client: 'Private Client',
+    image: '/img/Tirupur  palladam road..jpeg',
+    description: 'Tirupur residential property located along Palladam Road, developed with attention to practical planning, quality construction, and contemporary living.',
     highlights: [
-      '100% Zero-Liquid-Discharge Township',
-      'Private Plunge Pool & Solar Roofing',
-      'Biophilic Courtyard Architecture',
-      '24/7 Gated Security & Concierge'
+      'Structural Engineering Excellence',
+      'Contemporary Architectural Planning',
+      'High-Grade Construction Materials',
+      'Timely Execution & Handover'
     ],
     gallery: [
-      '/img/hero_background.png',
-      '/img/hero_construction_bg.png'
+      '/img/Tirupur  palladam road..jpeg'
     ]
   },
   {
-    id: 'veyes-metro-urban-bridge',
-    title: 'Metro Utility Flyover & Viaduct',
-    category: 'Infrastructure',
-    categoryLabel: 'Civil Infrastructure',
-    location: 'Anna Salai Corridor, Chennai',
-    area: '8.2 Km Span',
-    completionYear: '2026',
-    status: 'Ongoing',
-    client: 'Urban Transport Development Corp',
-    image: '/img/chennai-vertical-growth-master-plan-metro-corridor.jpg',
-    description: 'Heavy civil infrastructure contract for pre-cast segment elevation, storm utility corridors, and heavy segmental pier installation with zero traffic congestion routing.',
+    id: 'res-tirupur-karaipudur-naranapuram',
+    title: 'Residential Property',
+    category: 'Residential',
+    categoryLabel: 'Residential Development',
+    location: 'Tirupur – Karaipudur Road, Naranapuram',
+    area: 'Residential Build',
+    completionYear: 'Handed Over',
+    status: 'Completed',
+    client: 'Private Client',
+    image: '/img/Tirupur, karaipudur Road, Naranapuram.jpeg',
+    description: 'Independent residential construction on Karaipudur Road, Naranapuram, Tirupur, featuring robust structural design and modern residential amenities.',
     highlights: [
-      'Pre-cast Segmental Gantry Installation',
-      'Underground Utility Tunneling Integration',
-      'Seismic Restrainer Bridge Bearings',
-      'Continuous Night Execution Workflow'
+      'Custom Residential Design',
+      'Premium Structural Build Quality',
+      'Efficient Space Utilization',
+      'Complete Turnkey Delivery'
     ],
     gallery: [
-      '/img/hero_construction_bg.png',
-      '/img/WhatsApp Image 2026-08-02 at 9.40.36 PM.jpeg'
+      '/img/Tirupur, karaipudur Road, Naranapuram.jpeg',
+      '/img/Tirupur, karaipudur Road,Naranapuram.jpeg'
+    ]
+  },
+  {
+    id: 'veeyes-infraas-office',
+    title: 'VEEYES INFRAAS Office',
+    category: 'Commercial',
+    categoryLabel: 'Commercial Office',
+    location: 'Mannivakkam, Tambaram',
+    area: 'Commercial Space',
+    completionYear: 'Handed Over',
+    status: 'Completed',
+    client: 'VEEYES INFRAAS',
+    image: '/img/VEEYES INFRAAS Office.jpeg',
+    description: 'Corporate branch office facility for VEEYES INFRAAS at Mannivakkam, Tambaram, constructed to provide efficient workspace infrastructure and professional commercial aesthetics.',
+    highlights: [
+      'Commercial Office Architecture',
+      'Professional Interior & Exterior Fitouts',
+      'Integrated Electrical & Utility Infrastructure',
+      'Corporate Standard Handover'
+    ],
+    gallery: [
+      '/img/VEEYES INFRAAS Office.jpeg'
+    ]
+  },
+  {
+    id: 'res-tirupur-avinashi',
+    title: 'Residential Property',
+    category: 'Residential',
+    categoryLabel: 'Residential Development',
+    location: 'Tirupur – Avinashi Road',
+    area: 'Residential Build',
+    completionYear: 'Handed Over',
+    status: 'Completed',
+    client: 'Private Client',
+    image: '/img/Tirupur, avinashi road, Tirupur..jpeg',
+    description: 'Residential development situated along Avinashi Road, Tirupur, built with structural integrity, quality materials, and modern finishing.',
+    highlights: [
+      'Prime Corridor Development',
+      'Durable Foundation & Structural Frame',
+      'Weather-Resistant Exterior Coating',
+      'Quality Approved Materials'
+    ],
+    gallery: [
+      '/img/Tirupur, avinashi road, Tirupur..jpeg'
+    ]
+  },
+  {
+    id: 'res-tirupur-palladam-2',
+    title: 'Residential Property',
+    category: 'Residential',
+    categoryLabel: 'Residential Development',
+    location: 'Tirupur – Palladam Road',
+    area: 'Residential Build',
+    completionYear: 'Handed Over',
+    status: 'Completed',
+    client: 'Private Client',
+    image: '/img/Tirupur,  palladam Road.jpeg',
+    description: 'Second residential property project along Palladam Road, Tirupur, highlighting customized residential floor plans and modern construction standards.',
+    highlights: [
+      'Custom Structural Framework',
+      'Optimized Ventilation & Lighting',
+      'Standard-Compliant Plumbing & Wiring',
+      'Turnkey Project Management'
+    ],
+    gallery: [
+      '/img/Tirupur,  palladam Road.jpeg'
+    ]
+  },
+  {
+    id: 'res-tirupur-kangayam',
+    title: 'Residential Property',
+    category: 'Residential',
+    categoryLabel: 'Residential Development',
+    location: 'Tirupur – Kangayam Road',
+    area: 'Residential Build',
+    completionYear: 'Handed Over',
+    status: 'Completed',
+    client: 'Private Client',
+    image: '/img/Tirupur,Kangayam Road.jpeg',
+    description: 'Residential property on Kangayam Road, Tirupur, engineered with modern elevation design and quality construction practices.',
+    highlights: [
+      'Modern Elevation & Exterior Aesthetics',
+      'Solid Masonry & Structural Concrete',
+      'Refined Finishes & Workmanship',
+      'Handed Over On Schedule'
+    ],
+    gallery: [
+      '/img/Tirupur,Kangayam Road.jpeg'
     ]
   }
 ];

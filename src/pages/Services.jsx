@@ -17,12 +17,12 @@ export default function Services({ onOpenQuote }) {
       id: 'residential-construction',
       title: 'Residential Construction',
       icon: HomeIcon,
-      image: '/img/hero_background.png',
-      description: 'We specialize in constructing premium villas, apartments, independent houses, and residential developments that combine functionality with aesthetic excellence. Every project is carefully planned from foundation to completion using durable materials, modern construction techniques, and efficient project management to deliver homes that stand the test of time.',
+      image: '/img/Perungalthur -  Neukundram Road.jpeg',
+      description: 'We specialize in constructing premium villas, independent houses, and residential developments that combine functionality with aesthetic excellence. Every project is carefully planned from foundation to completion using durable materials, modern construction techniques, and efficient project management to deliver homes that stand the test of time.',
       benefits: [
         'Custom architectural planning & design',
         'Premium quality materials throughout',
-        'Structural strength & earthquake resilience',
+        'Structural strength & weather resilience',
         'On-time delivery within agreed budget'
       ],
       ctaText: 'Inquire About Residential Construction'
@@ -31,13 +31,13 @@ export default function Services({ onOpenQuote }) {
       id: 'commercial-construction',
       title: 'Commercial Construction',
       icon: Building2,
-      image: '/img/cf661530a209fec.jpg',
-      description: 'We design and construct office buildings, commercial complexes, retail spaces, and business infrastructure that meet modern industry standards. Our experienced engineers ensure every commercial project is executed with quality, safety, durability, and operational efficiency to serve your business for decades.',
+      image: '/img/VEEYES INFRAAS Office.jpeg',
+      description: 'We design and construct corporate office buildings, commercial complexes, retail spaces, and business facilities. Our experienced engineers ensure every commercial project is executed with quality, safety, durability, and operational efficiency.',
       benefits: [
-        'Modern office buildings & corporate complexes',
+        'Corporate office buildings & branch facilities',
         'Retail spaces & commercial developments',
-        'Structural safety & compliance standards',
-        'Energy-efficient design & construction'
+        'Structural safety & code compliance standards',
+        'Operational layout & energy-efficient build'
       ],
       ctaText: 'Inquire About Commercial Construction'
     },
@@ -45,8 +45,8 @@ export default function Services({ onOpenQuote }) {
       id: 'turnkey-construction',
       title: 'Turnkey Construction',
       icon: Layers,
-      image: '/img/o.jpeg',
-      description: 'Our turnkey construction services provide complete end-to-end project execution — from architectural planning and design to structural construction, finishing, and final handover. We manage every phase of the project, ensuring timely delivery, cost efficiency, and uncompromised quality throughout.',
+      image: '/img/Tirupur, avinashi road, Tirupur..jpeg',
+      description: 'Our turnkey construction services provide complete end-to-end project execution — from architectural planning and structural design to construction, finishing, and final handover. We manage every phase of the project with single-point accountability.',
       benefits: [
         'Single point of accountability from start to finish',
         'Architectural design to final handover',
@@ -59,13 +59,13 @@ export default function Services({ onOpenQuote }) {
       id: 'renovation-remodeling',
       title: 'Renovation & Remodeling',
       icon: HardHat,
-      image: 'img/792026816M-1783684335856.webp',
-      description: 'We transform existing residential, commercial, and industrial properties through professional renovation and remodeling solutions. Whether it is structural upgrades, interior modernization, or complete property makeovers, we create functional and visually appealing spaces while staying within budget and project timelines.',
+      image: '/img/Tirupur,  palladam Road.jpeg',
+      description: 'We transform existing residential and commercial properties through professional renovation and remodeling solutions. From structural strengthening to interior modernization and elevation upgrades, we create functional and visually appealing spaces.',
       benefits: [
-        'Residential & commercial renovation',
-        'Structural upgrades & strengthening',
-        'Interior modernization & makeovers',
-        'Budget-friendly with no hidden costs'
+        'Residential & commercial property renovation',
+        'Structural upgrades & elevation makeovers',
+        'Interior modernization & utility refitting',
+        'Budget-friendly execution with no hidden costs'
       ],
       ctaText: 'Inquire About Renovation'
     },
@@ -73,13 +73,13 @@ export default function Services({ onOpenQuote }) {
       id: 'interior-solutions',
       title: 'Interior Solutions',
       icon: Paintbrush,
-      image: '/img/hero_background.png',
-      description: 'Our interior design and execution services create elegant, practical, and modern spaces that reflect our clients\' lifestyle and business requirements. We deliver customized interior solutions with attention to detail, premium finishes, and superior craftsmanship for both homes and commercial properties.',
+      image: '/img/Tirupur,Kangayam Road.jpeg',
+      description: 'Our interior design and contracting services deliver elegant, practical, and modern spaces that reflect our clients\' lifestyle and business requirements. We deliver customized interior solutions with attention to detail and superior craftsmanship.',
       benefits: [
-        'Customized interior design & planning',
-        'Premium finishes & quality materials',
-        'Residential & commercial interiors',
-        'Attention to detail & superior craftsmanship'
+        'Customized interior design & spatial planning',
+        'Premium joinery & quality material choices',
+        'Residential & corporate interior fitouts',
+        'Superior finish & attention to detail'
       ],
       ctaText: 'Inquire About Interior Solutions'
     }

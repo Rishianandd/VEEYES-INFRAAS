@@ -17,37 +17,14 @@ import {
 } from 'lucide-react';
 import StatCounter from '../components/StatCounter';
 import { fadeUp, slideLeft, slideRight, scaleUp, staggerContainer } from '../utils/motionVariants';
+import { projectsData } from '../data/projectsData';
 
 export default function Home({ onOpenProject, onOpenQuote, onNavigateSection }) {
-  // Featured Projects — 3 representative projects
+  // Featured Projects — 3 representative projects from real projectsData
   const featuredProjects = [
-    {
-      id: 'veyes-villa-project',
-      title: 'Premium Villa Development',
-      location: 'Mudichur Road, Chennai',
-      image: '/img/images.jpg',
-      category: 'Residential',
-      status: 'Completed',
-      description: 'A thoughtfully designed gated villa community combining modern architecture with functional layouts and premium finishes.'
-    },
-    {
-      id: 'veyes-commercial-complex',
-      title: 'Commercial Office Complex',
-      location: 'GST Road, Chennai',
-      image: '/img/cf661530a209fec.jpg',
-      category: 'Commercial',
-      status: 'Completed',
-      description: 'A modern commercial building delivering efficient office spaces, durable construction, and premium corporate aesthetics.'
-    },
-    {
-      id: 'veyes-turnkey-project',
-      title: 'Turnkey Industrial Build',
-      location: 'Sriperumbudur, Chennai',
-      image: '/img/o.jpeg',
-      category: 'Turnkey',
-      status: 'Completed',
-      description: 'End-to-end turnkey execution from design to final handover, delivered on schedule with zero cost overruns.'
-    }
+    projectsData.find((p) => p.id === 'res-perungalathur-neukundram') || projectsData[0],
+    projectsData.find((p) => p.id === 'veeyes-infraas-office') || projectsData[3],
+    projectsData.find((p) => p.id === 'res-tirupur-karaipudur-naranapuram') || projectsData[2]
   ];
 
   // 5 Featured Services matching real VEEYES INFRAAS offerings
@@ -71,6 +48,11 @@ export default function Home({ onOpenProject, onOpenQuote, onNavigateSection }) 
       title: 'Renovation & Remodeling',
       desc: 'Structural upgrades, interior modernization, and complete property makeovers delivered on time and within budget.',
       icon: HardHat
+    },
+    {
+      title: 'Interior Solutions',
+      desc: 'Customized interior planning, woodworking, ceiling systems, and premium finishing for homes and business offices.',
+      icon: Paintbrush
     }
   ];
 
@@ -100,22 +82,34 @@ export default function Home({ onOpenProject, onOpenQuote, onNavigateSection }) 
           backgroundColor: 'var(--dark-charcoal)'
         }}
       >
-        <div
+        {/* Background Video with Smooth Overlay */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/img/hero_background.png"
           style={{
             position: 'absolute',
-            inset: 0,
-            backgroundImage: 'url("/img/hero_background.png")',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            filter: 'brightness(0.65) contrast(1.1)',
-            transform: 'scale(1.05)'
+            top: '50%',
+            left: '50%',
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            transform: 'translate(-50%, -50%)',
+            zIndex: 0,
+            filter: 'brightness(0.7) contrast(1.15)'
           }}
-        />
+        >
+          <source src="/img/video.mp4" type="video/mp4" />
+          <source src="/video.mp4" type="video/mp4" />
+        </video>
         <div
           style={{
             position: 'absolute',
             inset: 0,
-            background: 'linear-gradient(135deg, rgba(11, 79, 156, 0.88) 0%, rgba(29, 35, 42, 0.94) 100%)'
+            background: 'linear-gradient(135deg, rgba(11, 79, 156, 0.72) 0%, rgba(29, 35, 42, 0.88) 100%)',
+            zIndex: 1
           }}
         />
 
@@ -171,7 +165,7 @@ export default function Home({ onOpenProject, onOpenQuote, onNavigateSection }) 
             </motion.div>
           </div>
 
-          {/* Animated Counters */}
+          {/* Animated Frameless Counters */}
           <motion.div
             initial="hidden"
             animate="visible"
@@ -179,8 +173,11 @@ export default function Home({ onOpenProject, onOpenQuote, onNavigateSection }) 
             variants={scaleUp}
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-              gap: '28px'
+              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+              gap: '24px',
+              paddingTop: '40px',
+              marginTop: '50px',
+              borderTop: '1px solid rgba(255, 255, 255, 0.15)'
             }}
           >
             <StatCounter endValue={50} suffix="+" label="Projects Delivered" icon={Building2} />
@@ -210,10 +207,10 @@ export default function Home({ onOpenProject, onOpenQuote, onNavigateSection }) 
               }}
             >
               <img
-                src="/img/1.webp"
-                alt="VEEYES INFRAAS Construction Project"
+                src="/img/Tirupur,  palladam Road.jpeg"
+                alt="VEEYES INFRAAS Construction Excellence"
                 loading="lazy"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
+                style={{ width: '100%', height: '420px', objectFit: 'cover', display: 'block' }}
               />
             </motion.div>
 
@@ -318,7 +315,7 @@ export default function Home({ onOpenProject, onOpenQuote, onNavigateSection }) 
             <div className="badge-pill badge-blue" style={{ marginBottom: '14px' }}>Our Portfolio</div>
             <h2 className="section-title">Featured Projects</h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              A selection of our completed residential, commercial, and turnkey construction projects across Chennai.
+              A selection of our completed residential and commercial construction projects across Tamil Nadu.
             </p>
           </div>
 
@@ -369,7 +366,7 @@ export default function Home({ onOpenProject, onOpenQuote, onNavigateSection }) 
           </div>
 
           <div style={{ textAlign: 'center' }}>
-            <button className="btn-primary" onClick={onOpenQuote}>
+            <button className="btn-primary" onClick={() => onNavigateSection ? onNavigateSection('projects') : onOpenQuote()}>
               <span>View All Projects</span>
               <ArrowRight size={18} />
             </button>

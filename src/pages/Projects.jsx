@@ -107,7 +107,7 @@ export default function Projects({ onOpenProject, onOpenQuote }) {
               margin: '0 auto'
             }}
           >
-            Explore our delivered Grade-A IT parks, luxury oceanfront towers, turnkey logistics parks, and elevated civil expressways.
+            Explore our delivered residential property developments, commercial office facilities, and custom construction projects.
           </motion.p>
         </div>
       </section>

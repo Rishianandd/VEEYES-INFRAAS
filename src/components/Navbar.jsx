@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function Navbar({ activePage, setActivePage, onOpenQuote, onNavigateSection }) {
   const [scrolled, setScrolled] = useState(false);
@@ -188,6 +188,61 @@ export default function Navbar({ activePage, setActivePage, onOpenQuote, onNavig
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+        </div>
+      </div>
+
+      {/* Contact Details Sub-Bar below Navigation */}
+      <div
+        style={{
+          borderTop: scrolled ? '1px solid rgba(11, 79, 156, 0.08)' : '1px solid rgba(255, 255, 255, 0.12)',
+          backgroundColor: scrolled ? 'rgba(248, 250, 252, 0.96)' : 'rgba(15, 23, 42, 0.55)',
+          color: scrolled ? 'var(--dark-charcoal)' : 'rgba(255, 255, 255, 0.92)',
+          fontSize: '0.82rem',
+          padding: '8px 0',
+          transition: 'all 0.3s ease'
+        }}
+      >
+        <div
+          className="container"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '8px 24px'
+          }}
+        >
+          {/* Phone Numbers */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <Phone size={14} style={{ color: 'var(--primary-green)', flexShrink: 0 }} />
+            <a
+              href="https://wa.me/919444385611"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'inherit', textDecoration: 'none', fontWeight: 600 }}
+            >
+              +91 94443 85611 / +91 93810 45611
+            </a>
+          </div>
+
+          {/* Email */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <Mail size={14} style={{ color: 'var(--secondary-blue)', flexShrink: 0 }} />
+            <a
+              href="mailto:vebuild98@gmail.com"
+              style={{ color: 'inherit', textDecoration: 'none', fontWeight: 600 }}
+            >
+              vebuild98@gmail.com
+            </a>
+          </div>
+
+          {/* Address */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <MapPin size={14} style={{ color: 'var(--light-green)', flexShrink: 0 }} />
+            <span style={{ fontWeight: 500 }}>
+              Sairam Villas, Plot No. 61, Gajalakshmi St, Lakshmi Nagar, Mudichur Road, Chennai – 600048
+            </span>
+          </div>
         </div>
       </div>
 

@@ -1,86 +1,77 @@
 export const servicesData = [
   {
-    id: 'commercial',
-    title: 'Commercial & Corporate Construction',
-    badge: 'Commercial EPC',
-    shortDesc: 'Grade-A tech parks, high-rise office towers, shopping malls, and corporate headquarters built to international standards.',
-    iconName: 'Building2',
-    features: [
-      'LEED & IGBC Certified Green Buildings',
-      'Post-Tensioned & Composite Steel Structures',
-      'Advanced Facade Engineering & Double Glazing',
-      'Integrated Smart Building Management Systems'
-    ],
-    fullDesc: 'VEEYES INFRAAS specializes in constructing iconic commercial landmarks that blend aesthetic grandeur with structural integrity. Our commercial engineering division handles high-density foundation works, complex steel framing, and multi-tier basement excavations with zero disruption.'
-  },
-  {
     id: 'residential',
-    title: 'Luxury Residential Infrastructure',
-    badge: 'High-Rise & Villas',
-    shortDesc: 'High-rise residential apartments, premium gated villa communities, and integrated township developments.',
+    title: 'Residential Construction',
+    badge: 'Residential',
+    shortDesc: 'Independent houses, villas, and residential property developments engineered for durability and contemporary living.',
     iconName: 'Home',
+    image: '/img/Perungalthur -  Neukundram Road.jpeg',
     features: [
-      'Seismic Zone III & IV Structural Resilience',
-      'Acoustic Floor Insulation & Thermal Comfort',
-      'Resort-Style Amenities & Landscaped Enclaves',
-      'Smart Home & Solar Grid Integration'
+      'Custom Architectural & Floor Planning',
+      'High-Grade Reinforced Structural Frame',
+      'Weather-Resistant Exterior & Interior Finish',
+      'Complete On-Time Turnkey Handover'
     ],
-    fullDesc: 'We construct residential spaces where luxury meets engineering excellence. From high-rise apartment towers requiring precise formwork systems to sprawling luxury villa gated communities, our craftsmanship ensures enduring value for generations.'
+    fullDesc: 'VEEYES INFRAAS specializes in constructing independent residential houses, villas, and residential developments across Tamil Nadu. Every home is built with durable materials, practical layouts, and strict quality supervision from foundation to final inspection.'
   },
   {
-    id: 'industrial',
-    title: 'Industrial & Logistics Infrastructure',
-    badge: 'Turnkey Industrial',
-    shortDesc: 'Smart manufacturing plants, automated logistics hubs, cold storage facilities, and heavy industrial parks.',
-    iconName: 'Factory',
+    id: 'commercial',
+    title: 'Commercial Construction',
+    badge: 'Commercial',
+    shortDesc: 'Office buildings, commercial complexes, and retail infrastructure delivered with precision and corporate aesthetics.',
+    iconName: 'Building2',
+    image: '/img/VEEYES INFRAAS Office.jpeg',
     features: [
-      'Pre-Engineered Building (PEB) Structures',
-      'Super-Flat Heavy Duty Concrete Flooring',
-      'Automated Docking & Material Handling Setup',
-      'Hazardous Material & Safety Compliance'
+      'Corporate Office Architecture & Engineering',
+      'Integrated MEP & Utility Infrastructure',
+      'Durable Facade & Interior Buildouts',
+      'Regulatory & Safety Compliance Standards'
     ],
-    fullDesc: 'Industrial execution requires speed, precision, and adherence to heavy machinery loads. VEEYES INFRAAS delivers turnkey industrial facilities engineered for high operational throughput, durability, and strict environmental safety standards.'
-  },
-  {
-    id: 'civil',
-    title: 'Civil & Urban Infrastructure',
-    badge: 'Mega Infrastructure',
-    shortDesc: 'Elevated expressways, bridges, urban drainage systems, land development, and heavy civil utility networks.',
-    iconName: 'HardHat',
-    features: [
-      'Pre-Stressed & Post-Tensioned Concrete Viaducts',
-      'Underground Utility Corridors & Storm Drains',
-      'Heavy Earthmoving & Soil Stabilization',
-      'State & National Highway Expansion'
-    ],
-    fullDesc: 'Our civil infrastructure division takes on transformative public and private works. Backed by state-of-the-art heavy equipment fleets and advanced surveying technologies, we build infrastructure that powers regional economic growth.'
+    fullDesc: 'We design and construct commercial offices, corporate branch facilities, and business infrastructure tailored to operational efficiency. Our team ensures seamless project delivery, structural durability, and high safety standards.'
   },
   {
     id: 'turnkey',
-    title: 'Turnkey EPC Contracts',
+    title: 'Turnkey Construction',
     badge: 'Design-Build',
-    shortDesc: 'End-to-end design, engineering, procurement, project management, and construction under a single point of accountability.',
-    iconName: 'Briefcase',
+    shortDesc: 'End-to-end execution from architectural planning and material procurement to construction and final handover.',
+    iconName: 'Layers',
+    image: '/img/Tirupur, avinashi road, Tirupur..jpeg',
     features: [
-      'Single-Point Accountability & Budget Guarantee',
-      'BIM 3D/4D Structural Modeling & Clash Detection',
-      'Transparent Procurement & Vendor Networks',
-      'Strict Quality Control & Safety Protocols'
+      'Single Point of Accountability',
+      'Transparent Budgeting & Cost Guarantee',
+      'Rigorous On-Site Quality Control',
+      'Milestone-Driven Execution Timeline'
     ],
-    fullDesc: 'With our Turnkey EPC model, clients benefit from seamless coordination across design, supply chain, and site execution. We minimize risk, eliminate cost overruns, and guarantee on-time project completion.'
+    fullDesc: 'With our Turnkey EPC model, clients experience hassle-free construction management. We oversee architectural design, regulatory approvals, raw material sourcing, and complete structural construction for total peace of mind.'
   },
   {
-    id: 'fitout',
-    title: 'Interior Fit-Outs & Retrofitting',
-    badge: 'Interiors & Restoration',
-    shortDesc: 'High-end corporate office interiors, structural retrofitting, acoustic treatment, and architectural restoration.',
-    iconName: 'Sparkles',
+    id: 'renovation',
+    title: 'Renovation & Remodeling',
+    badge: 'Renovation',
+    shortDesc: 'Structural upgrades, property makeovers, and modernizing existing residential and commercial buildings.',
+    iconName: 'HardHat',
+    image: '/img/Tirupur,  palladam Road.jpeg',
     features: [
-      'Turnkey Corporate Interior Execution',
-      'Structural Strengthening & Carbon Fiber Wrapping',
-      'Custom Joinery, MEP & Fire Safety Retrofits',
-      'Rapid Off-Hours Fit-Out Management'
+      'Structural Strengthening & Wall Modifications',
+      'Interior & Exterior Elevation Upgrades',
+      'Plumbing, Electrical & Flooring Modernization',
+      'Cost-Effective Custom Workflows'
     ],
-    fullDesc: 'Transforming existing spaces into hyper-functional, aesthetically striking environments. Our fit-out team works round the clock to deliver precision interiors and structural upgrades without disrupting ongoing operations.'
+    fullDesc: 'Transforming existing properties into modern, functional spaces. Our renovation services refresh architectural layouts, upgrade utility infrastructure, and improve structural integrity without unnecessary cost inflation.'
+  },
+  {
+    id: 'interiors',
+    title: 'Interior Solutions',
+    badge: 'Interior Design',
+    shortDesc: 'Custom interior design, woodworking, ceiling systems, and premium finishing for homes and business offices.',
+    iconName: 'Paintbrush',
+    image: '/img/Tirupur,Kangayam Road.jpeg',
+    features: [
+      'Customized Residential & Commercial Interiors',
+      'Precision Modular Work & Custom Joinery',
+      'Lighting, Ceiling & Wall Treatments',
+      'Premium Aesthetic Handover'
+    ],
+    fullDesc: 'Our interior solutions division crafts comfortable, elegant interior spaces. We focus on space optimization, quality materials, and superior craftsmanship to deliver personalized interiors matching client specifications.'
   }
 ];

@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ProjectModal from './components/ProjectModal';
 import QuoteModal from './components/QuoteModal';
+import WhatsAppWidget from './components/WhatsAppWidget';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -17,6 +18,11 @@ export default function App() {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
 
   const handleNavigateSection = (sectionId) => {
+    if (sectionId === 'projects') {
+      setActivePage('projects');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
     if (activePage !== 'home') {
       setActivePage('home');
       setTimeout(() => {
@@ -105,6 +111,9 @@ export default function App() {
         isOpen={isQuoteOpen}
         onClose={() => setIsQuoteOpen(false)}
       />
+
+      {/* Floating WhatsApp / Phone Action Button */}
+      <WhatsAppWidget />
     </div>
   );
 }

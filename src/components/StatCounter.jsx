@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function StatCounter({ endValue, suffix = '', label, sublabel, icon: Icon }) {
   const [count, setCount] = useState(0);
@@ -24,79 +24,61 @@ export default function StatCounter({ endValue, suffix = '', label, sublabel, ic
 
   return (
     <motion.div
-      whileHover={{ y: -6, boxShadow: 'var(--shadow-hover)' }}
+      whileHover={{ y: -4 }}
       style={{
-        backgroundColor: 'var(--white)',
-        borderRadius: 'var(--radius-md)',
-        padding: '28px 24px',
-        border: '1px solid var(--border-light)',
-        boxShadow: 'var(--shadow-card)',
+        padding: '16px 12px',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'flex-start',
-        position: 'relative',
-        overflow: 'hidden'
+        alignItems: 'center',
+        textAlign: 'center',
+        position: 'relative'
       }}
     >
-      <div
-        style={{
-          position: 'absolute',
-          top: '-15px',
-          right: '-15px',
-          width: '70px',
-          height: '70px',
-          borderRadius: '50%',
-          backgroundColor: 'var(--green-tint-light)',
-          opacity: 0.5,
-          zIndex: 0
-        }}
-      />
       {Icon && (
         <div
           style={{
-            width: '46px',
-            height: '46px',
-            borderRadius: 'var(--radius-sm)',
-            backgroundColor: 'var(--blue-tint-light)',
-            color: 'var(--primary-blue)',
+            width: '52px',
+            height: '52px',
+            borderRadius: '50%',
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            backdropFilter: 'blur(8px)',
+            color: 'var(--light-green)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             marginBottom: '16px',
-            zIndex: 1
+            border: '1px solid rgba(255, 255, 255, 0.15)'
           }}
         >
-          <Icon size={24} />
+          <Icon size={26} />
         </div>
       )}
       <div
         style={{
           fontFamily: 'var(--font-heading)',
-          fontSize: '2.6rem',
+          fontSize: 'clamp(2.6rem, 3.8vw, 3.6rem)',
           fontWeight: 800,
-          color: 'var(--primary-blue)',
+          color: '#FFFFFF',
           lineHeight: 1.1,
           marginBottom: '6px',
-          zIndex: 1
+          letterSpacing: '-0.02em'
         }}
       >
         {count}
-        <span style={{ color: 'var(--primary-green)' }}>{suffix}</span>
+        <span style={{ color: 'var(--light-green)' }}>{suffix}</span>
       </div>
       <div
         style={{
           fontFamily: 'var(--font-heading)',
           fontSize: '1.05rem',
           fontWeight: 700,
-          color: 'var(--dark-charcoal)',
-          marginBottom: '4px',
-          zIndex: 1
+          color: 'rgba(255, 255, 255, 0.9)'
         }}
       >
         {label}
       </div>
       {sublabel && (
-        <div style={{ fontSize: '0.85rem', color: 'var(--charcoal-muted)', zIndex: 1 }}>
+        <div style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)', marginTop: '4px' }}>
           {sublabel}
         </div>
       )}
