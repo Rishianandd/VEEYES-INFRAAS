@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import LoadingScreen from './components/LoadingScreen';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ProjectModal from './components/ProjectModal';
@@ -13,9 +14,17 @@ import Leadership from './pages/Leadership';
 import Memberships from './pages/Memberships';
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
   const [activePage, setActivePage] = useState('home');
   const [selectedProject, setSelectedProject] = useState(null);
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleNavigateSection = (sectionId) => {
     if (sectionId === 'projects') {
@@ -70,6 +79,11 @@ export default function App() {
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      {/* 0.5s Loading Screen */}
+      <AnimatePresence>
+        {isLoading && <LoadingScreen key="loader" />}
+      </AnimatePresence>
+
       {/* Sticky Glassmorphism Navbar */}
       <Navbar
         activePage={activePage}
