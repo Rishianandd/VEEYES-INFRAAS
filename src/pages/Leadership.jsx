@@ -16,7 +16,7 @@ export default function Leadership({ onOpenQuote }) {
     {
       year: '2001',
       title: 'Founded VEEYES INFRAAS',
-      desc: 'Sridhar K established VEEYES INFRAAS in Chennai with a vision to deliver reliable, high-quality construction built on integrity, transparency, and engineering excellence.'
+      desc: 'SK Sridhar established VEEYES INFRAAS in Chennai with a vision to deliver reliable, high-quality construction built on integrity, transparency, and engineering excellence.'
     },
     {
       year: '2005',
@@ -41,7 +41,7 @@ export default function Leadership({ onOpenQuote }) {
     {
       year: '2026',
       title: '25+ Years of Trusted Excellence',
-      desc: 'Celebrating 25+ years of quality construction, with 50+ projects delivered and over 100 satisfied clients across Chennai and Tamil Nadu.'
+      desc: 'Celebrating 25+ years of quality construction, with 100+ projects delivered and over 400 satisfied clients across Chennai and Tamil Nadu.'
     }
   ];
 
@@ -96,11 +96,11 @@ export default function Leadership({ onOpenQuote }) {
                 <div style={{ width: '160px', height: '160px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 28px', boxShadow: '0 12px 30px rgba(0,0,0,0.35)', border: '4px solid rgba(255,255,255,0.3)' }}>
                   <img
                     src="/img/owner.jpeg"
-                    alt="Sridhar K - Founder & Managing Director"
+                    alt="SK Sridhar - Founder & Managing Director"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }}
                   />
                 </div>
-                <h3 style={{ fontSize: '2.1rem', fontWeight: 800, color: 'var(--white)', marginBottom: '8px' }}>Sridhar K</h3>
+                <h3 style={{ fontSize: '2.1rem', fontWeight: 800, color: 'var(--white)', marginBottom: '8px' }}>SK Sridhar</h3>
                 <div style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--light-green)', marginBottom: '20px' }}>Founder & Managing Director</div>
                 <div className="badge-pill" style={{ backgroundColor: 'rgba(255,255,255,0.12)', color: 'var(--white)', border: '1px solid rgba(255,255,255,0.35)', fontSize: '0.9rem', padding: '8px 20px' }}>
                   25+ Years Construction Experience

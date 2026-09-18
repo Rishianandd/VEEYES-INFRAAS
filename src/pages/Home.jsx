@@ -180,8 +180,8 @@ export default function Home({ onOpenProject, onOpenQuote, onNavigateSection }) 
               borderTop: '1px solid rgba(255, 255, 255, 0.15)'
             }}
           >
-            <StatCounter endValue={50} suffix="+" label="Projects Delivered" icon={Building2} />
-            <StatCounter endValue={100} suffix="+" label="Happy Clients" icon={Users} />
+            <StatCounter endValue={100} suffix="+" label="Projects Delivered" icon={Building2} />
+            <StatCounter endValue={400} suffix="+" label="Happy Clients" icon={Users} />
             <StatCounter endValue={25} suffix="+" label="Years Experience" icon={Award} />
             <StatCounter endValue={5} suffix="M+" label="Sq.ft Built" icon={Sparkles} />
           </motion.div>

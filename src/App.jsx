@@ -12,6 +12,7 @@ import Services from './pages/Services';
 import Projects from './pages/Projects';
 import Leadership from './pages/Leadership';
 import Memberships from './pages/Memberships';
+import Contact from './pages/Contact';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -65,6 +66,8 @@ export default function App() {
         return <Leadership onOpenQuote={() => setIsQuoteOpen(true)} />;
       case 'memberships':
         return <Memberships onOpenQuote={() => setIsQuoteOpen(true)} />;
+      case 'contact':
+        return <Contact />;
       case 'home':
       default:
         return (

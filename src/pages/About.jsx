@@ -26,7 +26,7 @@ export default function About({ onOpenQuote }) {
     {
       year: '2001',
       title: 'Foundation of VEEYES INFRAAS',
-      desc: 'Sridhar K established VEEYES INFRAAS in Chennai with a clear mission: to deliver reliable, high-quality construction with complete transparency and client trust.'
+      desc: 'SK Sridhar established VEEYES INFRAAS in Chennai with a clear mission: to deliver reliable, high-quality construction with complete transparency and client trust.'
     },
     {
       year: '2005',
@@ -115,7 +115,7 @@ export default function About({ onOpenQuote }) {
                 With over 25 years of experience, we provide end-to-end construction solutions combining innovative engineering, premium materials, skilled craftsmanship, and efficient project management to deliver projects on time without compromising quality.
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
-                {['Established 2001', '25+ Years Experience', 'Chennai-Based', '50+ Projects Delivered'].map((fact, i) => (
+                {['Established 2001', '25+ Years Experience', 'Chennai-Based', '100+ Projects Delivered'].map((fact, i) => (
                   <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontWeight: 700, color: 'var(--dark-charcoal)' }}>
                     <CheckCircle2 size={20} style={{ color: 'var(--primary-green)' }} />
                     <span>{fact}</span>
@@ -239,7 +239,7 @@ export default function About({ onOpenQuote }) {
                   </p>
                 </div>
                 <div>
-                  <h4 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--primary-blue)' }}>Sridhar K</h4>
+                  <h4 style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--primary-blue)' }}>SK Sridhar</h4>
                   <div style={{ fontSize: '0.92rem', color: 'var(--charcoal-muted)', fontWeight: 600 }}>Founder & Chairman, VEEYES INFRAAS</div>
                 </div>
               </motion.div>
@@ -251,7 +251,7 @@ export default function About({ onOpenQuote }) {
                   25+ Years of Construction Leadership
                 </h4>
                 <p style={{ fontSize: '0.98rem', color: 'var(--charcoal-muted)', lineHeight: 1.7, marginBottom: '24px' }}>
-                  Since founding VEEYES INFRAAS in 2001, Sridhar K has led the company to become a trusted construction name across Chennai, maintaining a perfect record of client satisfaction across all project categories.
+                  Since founding VEEYES INFRAAS in 2001, SK Sridhar has led the company to become a trusted construction name across Chennai, maintaining a perfect record of client satisfaction across all project categories.
                 </p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'var(--primary-green)', fontWeight: 700, fontSize: '0.95rem' }}>
                   <CheckCircle2 size={20} />
@@ -357,8 +357,8 @@ export default function About({ onOpenQuote }) {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '28px' }}>
             <StatCounter endValue={25} suffix="+" label="Years of Experience" sublabel="Since 2001" icon={Award} />
-            <StatCounter endValue={50} suffix="+" label="Projects Delivered" sublabel="Residential & Commercial" icon={Building2} />
-            <StatCounter endValue={100} suffix="+" label="Happy Clients" sublabel="Across Chennai" icon={Users} />
+            <StatCounter endValue={100} suffix="+" label="Projects Delivered" sublabel="Residential & Commercial" icon={Building2} />
+            <StatCounter endValue={400} suffix="+" label="Happy Clients" sublabel="Across Chennai" icon={Users} />
             <StatCounter endValue={5} suffix="M+" label="Sq. Ft. Built" sublabel="Delivered On Time" icon={TrendingUp} />
           </div>
         </div>

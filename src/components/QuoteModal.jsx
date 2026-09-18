@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { X, Send, CheckCircle2, Shield, Building, PhoneCall, Mail, Calculator, MapPin } from 'lucide-react';
+import { submitForm } from '../utils/submitForm';
 
 export default function QuoteModal({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
@@ -16,6 +17,8 @@ export default function QuoteModal({ isOpen, onClose }) {
 
   const [submitted, setSubmitted] = useState(false);
   const [referenceId, setReferenceId] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   if (!isOpen) return null;
 
@@ -23,26 +26,36 @@ export default function QuoteModal({ isOpen, onClose }) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const ref = 'VY-' + Math.floor(100000 + Math.random() * 900000);
-    setReferenceId(ref);
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setSubmitError('');
 
-    // Trigger confetti
     try {
+      await submitForm({
+        ...formData,
+        formType: 'Project Quote Request',
+        _subject: `New project quote request from ${formData.name}`
+      });
+      const ref = 'VY-' + Math.floor(100000 + Math.random() * 900000);
+      setReferenceId(ref);
+      setSubmitted(true);
+
       confetti({
         particleCount: 100,
         spread: 70,
         origin: { y: 0.6 }
       });
     } catch (err) {
-      console.log(err);
+      setSubmitError('We could not send your inquiry. Please try again or email vebuild98@gmail.com directly.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   const handleReset = () => {
     setSubmitted(false);
+    setSubmitError('');
     setFormData({
       name: '',
       email: '',
@@ -362,11 +375,16 @@ export default function QuoteModal({ isOpen, onClose }) {
                     <Shield size={16} style={{ color: 'var(--primary-green)' }} />
                     <span>Strict Commercial Non-Disclosure Guarantee</span>
                   </div>
-                  <button type="submit" className="btn-primary" style={{ padding: '14px 28px' }}>
-                    <span>Submit Quote Request</span>
+                  <button type="submit" className="btn-primary" disabled={isSubmitting} style={{ padding: '14px 28px', opacity: isSubmitting ? 0.7 : 1 }}>
+                    <span>{isSubmitting ? 'Sending...' : 'Submit Quote Request'}</span>
                     <Send size={18} />
                   </button>
                 </div>
+                {submitError && (
+                  <p role="alert" style={{ color: '#B42318', fontSize: '0.9rem', margin: 0 }}>
+                    {submitError}
+                  </p>
+                )}
               </form>
             )}
           </div>

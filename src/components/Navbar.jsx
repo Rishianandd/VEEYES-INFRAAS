@@ -36,12 +36,13 @@ export default function Navbar({ activePage, setActivePage, onOpenQuote, onNavig
     { id: 'services', label: 'Services' },
     { id: 'projects', label: 'Projects' },
     { id: 'leadership', label: 'Leadership' },
-    { id: 'memberships', label: 'Memberships' }
+    { id: 'memberships', label: 'Memberships' },
+    { id: 'contact', label: 'Contact' }
   ];
 
   const handleNavClick = (id) => {
     setMobileMenuOpen(false);
-    if (['about', 'services', 'projects', 'leadership', 'memberships'].includes(id)) {
+    if (['about', 'services', 'projects', 'leadership', 'memberships', 'contact'].includes(id)) {
       setActivePage(id);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (id === 'home') {

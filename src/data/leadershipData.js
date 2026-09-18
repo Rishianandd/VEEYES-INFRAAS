@@ -1,10 +1,10 @@
 export const leadershipData = [
   {
     id: 'sridhar-k',
-    name: 'Sridhar K',
+    name: 'SK Sridhar',
     title: 'Founder & Managing Director',
     experience: '25+ Years Experience',
-    bio: 'A visionary entrepreneur and seasoned construction leader, Sridhar K founded VEEYES INFRAAS with an unwavering commitment to quality, integrity, and client satisfaction. Under his strategic direction, the company has grown into one of Chennai\'s most trusted names in residential, commercial, and turnkey construction over the past 25 years.',
+    bio: 'A visionary entrepreneur and seasoned construction leader, SK Sridhar founded VEEYES INFRAAS with an unwavering commitment to quality, integrity, and client satisfaction. Under his strategic direction, the company has grown into one of Chennai\'s most trusted names in residential, commercial, and turnkey construction over the past 25 years.',
     specialties: ['Construction Management', 'Business Strategy', 'Client Relations'],
     image: '/img/owner.jpeg'
   }

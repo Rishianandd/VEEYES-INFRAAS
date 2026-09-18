@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, ShieldCheck, Building2, HelpCircle } from 'lucide-react';
+import { submitForm } from '../utils/submitForm';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -13,18 +14,30 @@ export default function Contact() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setSubmitError('');
+
     try {
+      await submitForm({
+        ...formData,
+        formType: 'Contact Inquiry',
+        _subject: `New contact inquiry from ${formData.name}`
+      });
+      setSubmitted(true);
       confetti({
         particleCount: 90,
         spread: 60,
         origin: { y: 0.6 }
       });
     } catch (err) {
-      console.log(err);
+      setSubmitError('We could not send your message. Please try again or email vebuild98@gmail.com directly.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -105,6 +118,7 @@ export default function Contact() {
                     </label>
                     <input
                       type="text"
+                      name="name"
                       required
                       placeholder="e.g. Ramesh Kumar"
                       value={formData.name}
@@ -127,6 +141,7 @@ export default function Contact() {
                       </label>
                       <input
                         type="email"
+                        name="email"
                         required
                         placeholder="name@company.com"
                         value={formData.email}
@@ -147,6 +162,7 @@ export default function Contact() {
                       </label>
                       <input
                         type="tel"
+                        name="phone"
                         required
                         placeholder="+91 98400 12345"
                         value={formData.phone}
@@ -168,6 +184,7 @@ export default function Contact() {
                       Inquiry Category *
                     </label>
                     <select
+                      name="subject"
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                       style={{
@@ -194,6 +211,7 @@ export default function Contact() {
                       Message / Project Details *
                     </label>
                     <textarea
+                      name="message"
                       rows={5}
                       required
                       placeholder="Please describe your project location, scale, requirements, or tendering timelines..."
@@ -211,10 +229,15 @@ export default function Contact() {
                     />
                   </div>
 
-                  <button type="submit" className="btn-primary" style={{ padding: '14px 28px', justifyContent: 'center' }}>
-                    <span>Send Inquiry</span>
+                  <button type="submit" className="btn-primary" disabled={isSubmitting} style={{ padding: '14px 28px', justifyContent: 'center', opacity: isSubmitting ? 0.7 : 1 }}>
+                    <span>{isSubmitting ? 'Sending...' : 'Send Inquiry'}</span>
                     <Send size={18} />
                   </button>
+                  {submitError && (
+                    <p role="alert" style={{ color: '#B42318', fontSize: '0.9rem', margin: 0 }}>
+                      {submitError}
+                    </p>
+                  )}
                 </form>
               )}
             </div>
