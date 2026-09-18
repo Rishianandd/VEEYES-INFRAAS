@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import confetti from 'canvas-confetti';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, ShieldCheck, Building2, HelpCircle } from 'lucide-react';
-import { submitForm } from '../utils/submitForm';
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -13,33 +12,7 @@ export default function Contact() {
     message: ''
   });
 
-  const [submitted, setSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitError, setSubmitError] = useState('');
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitError('');
-
-    try {
-      await submitForm({
-        ...formData,
-        formType: 'Contact Inquiry',
-        _subject: `New contact inquiry from ${formData.name}`
-      });
-      setSubmitted(true);
-      confetti({
-        particleCount: 90,
-        spread: 60,
-        origin: { y: 0.6 }
-      });
-    } catch (err) {
-      setSubmitError('We could not send your message. Please try again or email vebuild98@gmail.com directly.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  const [state, handleSubmit] = useForm('xwlppkog');
 
   return (
     <div style={{ paddingTop: '100px' }}>
@@ -51,6 +24,7 @@ export default function Contact() {
           </div>
           <h1 style={{ fontSize: 'clamp(2.2rem, 4vw, 3.5rem)', color: 'var(--white)', fontWeight: 800, marginBottom: '20px' }}>
             Contact VEEYES INFRAAS
+
           </h1>
           <p style={{ fontSize: '1.2rem', color: 'rgba(255, 255, 255, 0.88)', lineHeight: 1.6 }}>
             Our engineering & tendering teams are ready to discuss your commercial, residential, or heavy infrastructure projects.
@@ -73,7 +47,7 @@ export default function Contact() {
                 Fill out the form below and our project team will get back to you within 4 business hours.
               </p>
 
-              {submitted ? (
+              {state.succeeded ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -98,12 +72,11 @@ export default function Contact() {
                     Message Dispatched Successfully!
                   </h3>
                   <p style={{ color: 'var(--charcoal-muted)', fontSize: '0.95rem', marginBottom: '24px' }}>
-                    Thank you, <strong>{formData.name}</strong>. Our tendering division has received your inquiry and will reach out shortly.
+                    Thank you for contacting VEEYES INFRAAS. We have received your enquiry and will get back to you shortly.
                   </p>
                   <button
                     className="btn-primary"
                     onClick={() => {
-                      setSubmitted(false);
                       setFormData({ name: '', email: '', phone: '', subject: 'New Project Tender Inquiry', message: '' });
                     }}
                   >
@@ -132,6 +105,7 @@ export default function Contact() {
                         fontSize: '0.95rem'
                       }}
                     />
+                    <ValidationError field="name" errors={state.errors} />
                   </div>
 
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
@@ -155,6 +129,7 @@ export default function Contact() {
                           fontSize: '0.95rem'
                         }}
                       />
+                      <ValidationError field="email" errors={state.errors} />
                     </div>
                     <div>
                       <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 700, marginBottom: '6px', color: 'var(--dark-charcoal)' }}>
@@ -176,6 +151,7 @@ export default function Contact() {
                           fontSize: '0.95rem'
                         }}
                       />
+                      <ValidationError field="phone" errors={state.errors} />
                     </div>
                   </div>
 
@@ -204,6 +180,7 @@ export default function Contact() {
                       <option>Vendor / Supplier Empanelment</option>
                       <option>Careers & HR</option>
                     </select>
+                    <ValidationError field="subject" errors={state.errors} />
                   </div>
 
                   <div>
@@ -227,15 +204,16 @@ export default function Contact() {
                         fontFamily: 'inherit'
                       }}
                     />
+                    <ValidationError field="message" errors={state.errors} />
                   </div>
 
-                  <button type="submit" className="btn-primary" disabled={isSubmitting} style={{ padding: '14px 28px', justifyContent: 'center', opacity: isSubmitting ? 0.7 : 1 }}>
-                    <span>{isSubmitting ? 'Sending...' : 'Send Inquiry'}</span>
+                  <button type="submit" className="btn-primary" disabled={state.submitting} style={{ padding: '14px 28px', justifyContent: 'center', opacity: state.submitting ? 0.7 : 1 }}>
+                    <span>{state.submitting ? 'Sending...' : 'Send Inquiry'}</span>
                     <Send size={18} />
                   </button>
-                  {submitError && (
+                  {state.errors && !state.succeeded && (
                     <p role="alert" style={{ color: '#B42318', fontSize: '0.9rem', margin: 0 }}>
-                      {submitError}
+                      We could not send your message. Please check the form and try again.
                     </p>
                   )}
                 </form>

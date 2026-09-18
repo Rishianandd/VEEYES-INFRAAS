@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { X, Send, CheckCircle2, Shield, Building, PhoneCall, Mail, Calculator, MapPin } from 'lucide-react';
-import { submitForm } from '../utils/submitForm';
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function QuoteModal({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
@@ -15,10 +15,8 @@ export default function QuoteModal({ isOpen, onClose }) {
     details: ''
   });
 
-  const [submitted, setSubmitted] = useState(false);
-  const [referenceId, setReferenceId] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitError, setSubmitError] = useState('');
+  const [state, handleSubmit] = useForm('xwlppkog');
+  const [referenceId] = useState(() => 'VY-' + Math.floor(100000 + Math.random() * 900000));
 
   if (!isOpen) return null;
 
@@ -26,36 +24,7 @@ export default function QuoteModal({ isOpen, onClose }) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitError('');
-
-    try {
-      await submitForm({
-        ...formData,
-        formType: 'Project Quote Request',
-        _subject: `New project quote request from ${formData.name}`
-      });
-      const ref = 'VY-' + Math.floor(100000 + Math.random() * 900000);
-      setReferenceId(ref);
-      setSubmitted(true);
-
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 }
-      });
-    } catch (err) {
-      setSubmitError('We could not send your inquiry. Please try again or email vebuild98@gmail.com directly.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   const handleReset = () => {
-    setSubmitted(false);
-    setSubmitError('');
     setFormData({
       name: '',
       email: '',
@@ -148,7 +117,7 @@ export default function QuoteModal({ isOpen, onClose }) {
           </div>
 
           <div style={{ padding: '32px' }}>
-            {submitted ? (
+            {state.succeeded ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -174,7 +143,7 @@ export default function QuoteModal({ isOpen, onClose }) {
                   Inquiry Received!
                 </h3>
                 <p style={{ color: 'var(--charcoal-muted)', fontSize: '1rem', maxWidth: '480px', margin: '0 auto 20px' }}>
-                  Thank you, <strong>{formData.name}</strong>. Your project inquiry has been received and forwarded to <strong style={{ color: 'var(--primary-blue)' }}>vebuild98@gmail.com</strong>.
+                  Thank you for contacting VEEYES INFRAAS. We have received your enquiry and will get back to you shortly.
                 </p>
 
                 <div
@@ -226,6 +195,7 @@ export default function QuoteModal({ isOpen, onClose }) {
                         fontSize: '0.95rem'
                       }}
                     />
+                    <ValidationError field="name" errors={state.errors} />
                   </div>
 
                   <div>
@@ -248,6 +218,7 @@ export default function QuoteModal({ isOpen, onClose }) {
                         fontSize: '0.95rem'
                       }}
                     />
+                    <ValidationError field="email" errors={state.errors} />
                   </div>
                 </div>
 
@@ -272,6 +243,7 @@ export default function QuoteModal({ isOpen, onClose }) {
                         fontSize: '0.95rem'
                       }}
                     />
+                    <ValidationError field="phone" errors={state.errors} />
                   </div>
 
                   <div>
@@ -294,6 +266,7 @@ export default function QuoteModal({ isOpen, onClose }) {
                         fontSize: '0.95rem'
                       }}
                     />
+                    <ValidationError field="location" errors={state.errors} />
                   </div>
                 </div>
 
@@ -321,6 +294,7 @@ export default function QuoteModal({ isOpen, onClose }) {
                       <option>Renovation & Remodeling</option>
                       <option>Interior Design & Execution</option>
                     </select>
+                    <ValidationError field="serviceType" errors={state.errors} />
                   </div>
 
                   <div>
@@ -345,6 +319,7 @@ export default function QuoteModal({ isOpen, onClose }) {
                       <option>₹2 Crore - ₹10 Crore</option>
                       <option>Above ₹10 Crore</option>
                     </select>
+                    <ValidationError field="budgetRange" errors={state.errors} />
                   </div>
                 </div>
 
@@ -368,6 +343,7 @@ export default function QuoteModal({ isOpen, onClose }) {
                       fontFamily: 'inherit'
                     }}
                   />
+                  <ValidationError field="details" errors={state.errors} />
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'center', justifyBetween: 'space-between', gap: '16px', marginTop: '10px' }}>
@@ -375,14 +351,14 @@ export default function QuoteModal({ isOpen, onClose }) {
                     <Shield size={16} style={{ color: 'var(--primary-green)' }} />
                     <span>Strict Commercial Non-Disclosure Guarantee</span>
                   </div>
-                  <button type="submit" className="btn-primary" disabled={isSubmitting} style={{ padding: '14px 28px', opacity: isSubmitting ? 0.7 : 1 }}>
-                    <span>{isSubmitting ? 'Sending...' : 'Submit Quote Request'}</span>
+                  <button type="submit" className="btn-primary" disabled={state.submitting} style={{ padding: '14px 28px', opacity: state.submitting ? 0.7 : 1 }}>
+                    <span>{state.submitting ? 'Sending...' : 'Submit Quote Request'}</span>
                     <Send size={18} />
                   </button>
                 </div>
-                {submitError && (
+                {state.errors && !state.succeeded && (
                   <p role="alert" style={{ color: '#B42318', fontSize: '0.9rem', margin: 0 }}>
-                    {submitError}
+                    We could not send your inquiry. Please check the form and try again.
                   </p>
                 )}
               </form>
